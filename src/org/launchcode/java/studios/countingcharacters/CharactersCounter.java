@@ -17,8 +17,8 @@ public class CharactersCounter {
         int len = str.length();
         for (int i=0; i<len-1; i++) {
         	c = str.charAt(i);
-        	for (int j=0; j<len-1; j++) {
-        		if (c == str.charAt(j+1)) {
+        	for (int j=1; j<len; j++) {
+        		if (c == str.charAt(j)) {
         			cnt++;
         		}
         	}
