@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class CharactersCounter {
     public static void main (String[] args) {
         HashMap<Character, Integer> characters = new HashMap<>();
+        
+        // hard-coding some text and storing it in a variable...
         /*
         String str = "If the product of two terms is zero then "
         		+ "common sense says at least one of the two terms "
@@ -15,11 +17,22 @@ public class CharactersCounter {
         		+ "the equation to equal zero. Once you’ve done that, "
         		+ "it’s pretty straightforward from there.";
        */
+        
+        // Prompting the user to enter the string in the command line...
+        /*
         Scanner in = new Scanner(System.in);
 		System.out.println("Enter your string: ");
 		String str = in.nextLine();
 		str = str.toLowerCase();
 		in.close();
+		*/
+        
+        // Reading the string in from a file...
+        //*
+        String str = FileReader.readTxt("C:\\Users\\Owner\\git\\java-web-dev-exercises\\src\\org\\launchcode\\java\\studios\\countingcharacters\\text.txt");
+        str = str.toLowerCase();
+        // */
+        
         int cnt = 0;
         char c;
         int len = str.length();
